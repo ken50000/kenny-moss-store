@@ -130,7 +130,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .cursor{position:absolute;z-index:6;left:20%;top:41%;width:44px;image-rendering:pixelated;animation:poke 3.5s ease-in-out infinite;pointer-events:none}
 @keyframes poke{0%,100%{transform:translate(0,0)}45%{transform:translate(14px,12px)}55%{transform:translate(12px,10px) scale(.92)}}
 .hero2 .tape.a{left:-5%;right:-5%;bottom:20px;transform:rotate(-2deg);z-index:5}
-.hero-cta{position:absolute;z-index:6;left:50%;bottom:76px;transform:translateX(-50%);display:flex;gap:10px}
+.hero-cta{position:absolute;z-index:6;left:50%;bottom:32px;transform:translateX(-50%);display:flex;gap:10px}
 .hero-cta .pill{box-shadow:4px 4px 0 var(--ink);color:var(--ink);white-space:nowrap}
 .hero-cta .pill.ghost{background:#fff}
 @media (max-width:1100px){.p-drop,.cursor{display:none}.p-feat{top:auto;bottom:24%;left:2%;width:190px}.p-stick{left:6%;top:16%}.p-tag{right:6%;top:auto;bottom:40%}}
@@ -145,7 +145,7 @@ button{font:inherit;color:inherit;cursor:pointer}
   .hero-cta{flex-direction:row}
   .hero-cta .pill{padding:.6em 1.1em;font-size:.9rem}
   .bubble{left:52%;top:30%}
-  .hero-cta{bottom:64px}
+  .hero-cta{bottom:24px}
 }
 
 /* ---------- Header ---------- */
@@ -453,7 +453,6 @@ footer .big{font-size:clamp(3rem,13vw,12rem);color:var(--lilac);margin:0;line-he
 
 <!-- Intro -->
 <div id="intro" aria-label="Welcome Studdas intro" role="dialog" hidden>
-  <div class="intro-tape t1 label" aria-hidden="true"><span>Welcome Studdas ✂ Shop the drop ✂ @itskennymoss ✂ Welcome Studdas ✂ Shop the drop ✂ @itskennymoss ✂ Welcome Studdas ✂ Shop the drop ✂ @itskennymoss ✂ Welcome Studdas ✂ Shop the drop ✂ @itskennymoss ✂ Welcome Studdas ✂ Shop the drop ✂ @itskennymoss ✂ Welcome Studdas ✂ Shop the drop ✂ @itskennymoss ✂ Welcome Studdas ✂ Shop the drop ✂ @itskennymoss ✂ Welcome Studdas ✂ Shop the drop ✂ @itskennymoss ✂ </span></div>
   <div class="stage" aria-hidden="true">
     <div class="ichar"><img id="introChar" alt=""></div>
     <div class="ban"><div class="half l"><span>WELCOME STUDDAS</span></div><div class="half r"><span>WELCOME STUDDAS</span></div><i class="fiber" style="--dx:-90px;--dy:-70px;--r:120deg"></i><i class="fiber" style="--dx:80px;--dy:-90px;--r:-140deg"></i><i class="fiber" style="--dx:-60px;--dy:90px;--r:200deg"></i><i class="fiber" style="--dx:100px;--dy:60px;--r:-90deg"></i><i class="fiber" style="--dx:-130px;--dy:10px;--r:160deg"></i><i class="fiber" style="--dx:120px;--dy:-20px;--r:-200deg"></i><i class="fiber" style="--dx:10px;--dy:-120px;--r:90deg"></i><i class="fiber" style="--dx:-20px;--dy:120px;--r:-120deg"></i></div>
@@ -465,7 +464,6 @@ footer .big{font-size:clamp(3rem,13vw,12rem);color:var(--lilac);margin:0;line-he
   <button class="skip" id="skip" type="button">Skip intro →</button>
 </div>
 
-<div class="ticker label" aria-hidden="true"><span>✂ Welcome Studdas &nbsp; ✂ New drops landing soon &nbsp; ✂ Follow @itskennymoss &nbsp; ✂ Stay loud, dress proud &nbsp; ✂ Welcome Studdas &nbsp; ✂ New drops landing soon &nbsp; ✂ Follow @itskennymoss &nbsp; ✂ Stay loud, dress proud &nbsp; ✂ Welcome Studdas &nbsp; ✂ New drops landing soon &nbsp; ✂ Follow @itskennymoss &nbsp; ✂ Stay loud, dress proud &nbsp; ✂ Welcome Studdas &nbsp; ✂ New drops landing soon &nbsp; ✂ Follow @itskennymoss &nbsp; ✂ Stay loud, dress proud &nbsp;</span></div>
 
 <header class="site wrap">
   <div class="inner nav" id="nav">
@@ -767,15 +765,12 @@ function viewHome(){
       <svg class="cursor" viewBox="0 0 11 14" aria-hidden="true" shape-rendering="crispEdges"><path fill="#14112A" d="M3 0h2v1H3zM2 1h1v6H2zM5 1h1v4H5zM6 4h2v1H6zM8 5h1v1H8zM9 5h1v1H9zM10 6h1v5h-1zM1 7h1v1H1zM0 8h1v2H0zM1 10h1v1H1zM2 11h1v1H2zM3 12h1v2H3zM4 13h6v1H4zM9 11h1v2H9z"/><path fill="#fff" d="M3 1h2v7h1V5h2v1h1v1h1v4H9v2H4v-1H3v-1H2v-1H1V8h1V7h1z"/></svg>
       <div class="hero-cta"><a class="pill" href="#shop">Shop now →</a><a class="pill ghost" style="background:#fff" href="#socials">@itskennymoss</a></div>
     </div>
-    ${tape("Welcome Studdas","a")}
   </section>
 
   <section class="band"><div class="wrap"><div class="inner">
     <div class="sec-head reveal"><div><span class="label">Featured</span><h3 class="display">Fresh off the table</h3><p>Drag, swipe, or use the arrows. Hover a card to see the back.</p></div><a class="pill ghost" href="#shop">See all →</a></div>
     ${carousel("featured",PRODUCTS.filter(p=>p.featured))}
   </div></div></section>
-
-  <div class="bigtape" aria-hidden="true">${tape("New drop loading","t1")}${tape("Stay loud · Dress proud","t2")}</div>
 
   <section class="band paper"><div class="wrap"><div class="inner">
     <div class="sec-head reveal"><div><span class="label">Just landed</span><h3 class="display">New arrivals</h3></div><a class="pill ghost" href="#shop">Shop new →</a></div>
